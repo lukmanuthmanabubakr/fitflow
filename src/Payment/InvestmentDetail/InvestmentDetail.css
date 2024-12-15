@@ -1,0 +1,57 @@
+/* Container */
+.investment-detail-container {
+    background-color: #f9fff9;
+    border: 1px solid #cce7cc;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 7rem auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title */
+  .investment-detail-title {
+    font-size: 1.8rem;
+    color: #2d862d;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Content */
+  .investment-detail-content {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .investment-detail-content p {
+    margin-bottom: 1rem;
+  }
+  
+  .detail-value {
+    color: #2e7d32;
+    font-weight: bold;
+  }
+  
+  /* Loading Message */
+  .loading-message {
+    font-size: 1.2rem;
+    color: #777;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* Status Colors */
+  .status-active {
+    color: #4caf50;
+  }
+  
+  .status-inactive {
+    color: #d32f2f;
+  }
+  
+  .status-completed {
+    color: #2e7d32;
+  }
+  

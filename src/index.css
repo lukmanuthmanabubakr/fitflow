@@ -1,26 +1,111 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
-html {
-  scroll-behavior: smooth;
-}
-body {
-  margin: 0;
+/* src/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
   padding: 0;
-  font-family: "Poppins", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling for the entire page */
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 2px;
-}
-/* Track */
-::-webkit-scrollbar-track {
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 6px;
-  height: 50px;
+:root {
+  --nav-bg: rgb(240, 240, 240);
+  --nav-links: rgb(50, 205, 50);
+  --nav-logo: rgb(34, 139, 34);
+  --nav-btns-bg: rgb(34, 139, 34);
+  --nav-btns-text: rgb(255, 255, 255);
+  --nav-btns-bg-hover: rgb(50, 205, 50);
+
+  --login-bg: rgb(227, 255, 227);
+  --login-bg-card: rgb(240, 255, 240);
+  --login-bg-h2-color: rgb(34, 139, 34);
+
+  --login-input-text: rgb(50, 50, 50);
+  --login-input-bg-border: rgb(180, 230, 0);
+  --login-input-bg: #ffffff;
+
+  --login-btn-bg: rgb(0, 128, 0);
+  --login-btn-text: #ffffff;
+  --login-btn-br-hover: rgb(0, 100, 0);
+  --login-btn-text-hover: #fff;
+  --UserDontHaveAccount-p: rgb(100, 100, 100);
+  --UserDontHaveAccount: rgb(16, 139, 16);
+  --UserDontHaveAccount-hover: rgb(0, 100, 0);
+
+  --hero-text-one: #fff;
+  --hero-text-one-span: #d4e157;
+  --hero-text-two: #e0e0e0;
+
+  /* Section 2 */
+  --section-2-bg: #f0f7f4;
+  --section-2-header: #2f4f4f;
+  --section-2-card: #e8f5e9;
+
+  /* Section 3 */
+  --section-3-bg: #2e8b57;
+  --section-3-header: #ffffff;
+  --section-3-p: #f0f7f4;
+  --section-3-btn: #f0f7f4;
+  --section-3-btn-hover: #2e8b57;
+  --section-3-btn-text: #2e8b57;
+  --section-3-btn-text-hover: #f0f7f4;
+  --card-image-bg: #fff;
+  --card-image-text: #333;
+
+  /* section 4 */
+  --section-4-bg: #f0f7f4;
+  --section-4-header: #2f4f4f;
+  --section-4-card: #e8f5e9;
+  --section-4-card-icon: #4caf50;
+  /* section 5 */
+  --section-5-bg: #f0f7f4;
+  --section-5-header: #f0f7f4;
+  --section-5-card: #e8f5e9;
+  --section-5-card-icon: #4caf50;
+  /* Plans */
+  --plans-text: #2d6a4f;
+  --plan-bg: #f0f7f4;
+  --plan-title: #0f5132;
+  --plan-price: #2d6a4f;
+  --plan-desc: #6c757d;
+  --plan-button: #2d6a4f;
+  /* workflow */
+  --workflow-card-bg: #e8f5e9;
+  --workflow-icon-bg: #4caf50;
+  --workflow-title-color: #2f4f4f;
+  --workflow-text-color: #333;
+  /* Contact Us */
+  --Contact-us-bg: #f0f7f4;
+  --big-circle-contact: #f0f7f4;
+
+  --green-primary: #4caf50;
+  --green-dark: #388e3c;
+  --green-light: #c8e6c9;
+  --text-dark: #333;
+  --text-light: #fff;
+
+  /* DASHBOARD */
+  --dashboard-h2: #87ea88;
+  --dashboard-name: #2e8b57;
+  --dashboard-name-hover: #439768;
+
+
+}
+
+[data-theme="dark"] {
 }

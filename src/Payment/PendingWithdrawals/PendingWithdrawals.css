@@ -1,0 +1,46 @@
+.pending-withdrawals-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #e6f2e6; /* Light green */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.1);
+}
+
+.header {
+  color: #006400; /* Dark green */
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.loading-text,
+.no-data-text {
+  color: #006400; /* Dark green */
+  text-align: center;
+}
+
+.withdrawal-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 15px;
+}
+
+.withdrawal-item {
+  padding: 15px;
+  background-color: #f0fff0; /* Mint green */
+  border-left: 5px solid #008000; /* Strong green */
+  border-radius: 5px;
+}
+
+.withdrawal-item p {
+  margin: 5px 0;
+  color: #004d00; /* Medium dark green */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+  .withdrawal-list {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+}

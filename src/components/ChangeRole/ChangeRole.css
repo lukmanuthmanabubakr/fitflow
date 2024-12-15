@@ -1,0 +1,90 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 100, 0, 0.5); /* Dark green tint */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #e8f5e9; /* Light green */
+  border: 2px solid #4caf50; /* Primary green border */
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 128, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #2e7d32; /* Darker green */
+}
+
+.close-icon {
+  cursor: pointer;
+  color: #388e3c; /* Medium green */
+  transition: color 0.2s ease;
+}
+
+.close-icon:hover {
+  color: #1b5e20; /* Dark green when hovered */
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #81c784; /* Light green border */
+  background-color: #f1f8e9; /* Very light green */
+  color: #2e7d32; /* Text in dark green */
+}
+
+select:focus {
+  outline: none;
+  border-color: #4caf50; /* Focused border */
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-btn, .cancel-btn {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn {
+  background-color: #4caf50; /* Green */
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: #388e3c; /* Darker green */
+}
+
+.cancel-btn {
+  background-color: #d32f2f; /* Red */
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background-color: #b71c1c; /* Darker red */
+}

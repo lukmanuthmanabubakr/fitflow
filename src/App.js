@@ -1,49 +1,63 @@
-import { ThemeProvider, styled } from "styled-components";
-import { lightTheme } from "./utils/Themes";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Authentication from "./pages/Authentication";
-import { useState } from "react";
-import { useSelector } from "react-redux";
-import Navbar from "./components/Navbar";
-import Dashboard from "./pages/Dashboard";
-import Workouts from "./pages/Workouts";
-import ContactPage from "./components/Contact";
+import React, { useEffect } from "react";
+import Navbar from "./components/Navbar/Navbar";
+import "./index.css";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import Home from "./Pages/Home/Home";
+import Login from "./Pages/Auth/Login/Login";
+import SignUp from "./Pages/Auth/SignUp/SignUp";
+import ForgotPassword from "./Pages/Auth/ForgotPassword/ForgotPassword";
+import ResetPassword from "./Pages/Auth/ResetPassword/ResetPassword";
+import LoginWithCode from "./Pages/Auth/LoginWithCode/LoginWithCode";
+import Verify from "./Pages/Auth/Verify/Verify";
+import Profile from "./Pages/Profile/Profile";
+import axios from "axios";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getLoginStatus,
+  getUser,
+  selectIsLoggedIn,
+  selectUser,
+} from "./redux/features/auth/authSlice";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
-const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: ${({ theme }) => theme.bg};
-  color: ${({ theme }) => theme.text_primary};
-  overflow-x: hidden;
-  overflow-y: hidden;
-  transition: all 0.2s ease;
-`;
+axios.defaults.withCredentials = true;
 
-function App() {
-  const { currentUser } = useSelector((state) => state.user);
-  // const [user, setUser] = useState(true);
+const App = () => {
+  const dispatch = useDispatch();
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+  const user = useSelector(selectUser);
+
+  useEffect(() => {
+    dispatch(getLoginStatus());
+    if (isLoggedIn && user === null) {
+      dispatch(getUser());
+    }
+  }, [dispatch, isLoggedIn, user]);
   return (
-    <ThemeProvider theme={lightTheme}>
-      <BrowserRouter>
-        {currentUser ? (
-          <Container>
-            <Navbar currentUser={currentUser} />
-            <Routes>
-              <Route path="/" exact element={<Dashboard />} />
-              <Route path="/workouts" exact element={<Workouts />} />
-              <Route path="/contact" exact element={<ContactPage />} />
-            </Routes>
-          </Container>
-        ) : (
-          <Container>
-            <Authentication />
-          </Container>
-        )}
-      </BrowserRouter>
-    </ThemeProvider>
+    <div className="App">
+      <Navbar />
+      <ToastContainer />
+      <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<SignUp />} />
+          <Route path="/forgot" element={<ForgotPassword />} />
+          <Route
+            path="/resetPassword/:resetToken"
+            element={<ResetPassword />}
+          />
+          <Route path="/loginWithCode/:email" element={<LoginWithCode />} />
+          <Route path="/verify/:verificationToken" element={<Verify />} />
+          {/* <Route path="/user-profile" element={<UserProfile />} /> */}
+          <Route path="/user-profile" element={<Profile />} />
+        </Routes>
+      </GoogleOAuthProvider>
+      {/* <Loader /> */}
+    </div>
   );
-}
+};
 
 export default App;
