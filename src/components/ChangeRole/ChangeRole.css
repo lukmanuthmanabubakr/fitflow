@@ -4,7 +4,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 100, 0, 0.5); /* Dark green tint */
+  /* From https://css.glass */
+  background: rgba(31, 121, 238, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid rgba(31, 121, 238, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +19,7 @@
 
 .modal-content {
   background-color: #e8f5e9; /* Light green */
-  border: 2px solid #4caf50; /* Primary green border */
+  border: 2px solid #0066EE; /* Primary green border */
   padding: 20px;
   border-radius: 10px;
   width: 400px;
@@ -29,17 +35,17 @@
 
 .modal-header h3 {
   margin: 0;
-  color: #2e7d32; /* Darker green */
+  color: #0066EE; /* Darker green */
 }
 
 .close-icon {
   cursor: pointer;
-  color: #388e3c; /* Medium green */
+  color: #0066EE; /* Medium green */
   transition: color 0.2s ease;
 }
 
 .close-icon:hover {
-  color: #1b5e20; /* Dark green when hovered */
+  color: #1f79ee; /* Dark green when hovered */
 }
 
 select {
@@ -49,12 +55,12 @@ select {
   border-radius: 5px;
   border: 1px solid #81c784; /* Light green border */
   background-color: #f1f8e9; /* Very light green */
-  color: #2e7d32; /* Text in dark green */
+  color: #0066EE; /* Text in dark green */
 }
 
 select:focus {
   outline: none;
-  border-color: #4caf50; /* Focused border */
+  border-color: #0066EE; /* Focused border */
 }
 
 .modal-buttons {
@@ -62,7 +68,8 @@ select:focus {
   justify-content: space-between;
 }
 
-.submit-btn, .cancel-btn {
+.submit-btn,
+.cancel-btn {
   padding: 8px 15px;
   border-radius: 5px;
   border: none;
@@ -72,12 +79,12 @@ select:focus {
 }
 
 .submit-btn {
-  background-color: #4caf50; /* Green */
+  background-color: #0066EE; /* Green */
   color: #fff;
 }
 
 .submit-btn:hover {
-  background-color: #388e3c; /* Darker green */
+  background-color: #1f79ee; /* Darker green */
 }
 
 .cancel-btn {

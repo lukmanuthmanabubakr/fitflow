@@ -42,7 +42,7 @@
 /* Icon style */
 .iIcon {
   font-size: 30px;
-  color: #4caf50; /* Green color for the icons */
+  color: #0066EE; /* Green color for the icons */
   margin-right: 15px;
 }
 
@@ -61,7 +61,7 @@
 .num {
   font-size: 20px;
   font-weight: bold;
-  color: #4caf50; /* Green for numbers */
+  color: #0066EE; /* Green for numbers */
 }
 
 /* Responsiveness for small screens */

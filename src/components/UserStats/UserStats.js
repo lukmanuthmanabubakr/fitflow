@@ -89,7 +89,7 @@ const UserStats = () => {
             <p>No user found...</p>
           ) : (
             filteredUsers.map((user, index) => {
-              const { _id, name, email, role, photo, totalMaturityAmount, balance } = user;
+              const { _id, name, email, role, photo} = user;
               return (
                 <div className="userCard" key={_id}>
                   <div className="cardHeader">
@@ -114,20 +114,12 @@ const UserStats = () => {
                         >
                           Delete User
                         </button>
-                        <button
-                          onClick={() => navigate(`/edit-balance/${_id}`)}
-                          style={{ color: "#2e8b57" }}
-                        >
-                          Edit Total-profit
-                        </button>
                       </div>
                     )}
                   </div>
                   <div className="cardBody">
                     <h3>{shortenText(name, 12)}</h3>
                     <p>{email}</p>
-                    <p>Balance: ${balance.toLocaleString()}</p>
-                    <p>Total-profit: ${totalMaturityAmount.toLocaleString()}</p>
                     <p>Role: {role}</p>
                   </div>
                 </div>
@@ -136,17 +128,6 @@ const UserStats = () => {
           )}
         </div>
       </div>
-      {isModalOpen && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <ChangeRole _id={selectedUser.id} email={selectedUser.email} />
-            <button className="cancel-btn" onClick={closeChangeRoleModal}>
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-
       <ChangeRole
         isOpen={isModalOpen}
         onClose={closeChangeRoleModal}

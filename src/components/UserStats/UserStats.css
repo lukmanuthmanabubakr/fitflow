@@ -14,7 +14,7 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  border: 2px solid var(--nav-btns-bg);
+  border: 2px solid var(--nav-logo);
 }
 
 .userCon {

@@ -47,6 +47,7 @@
 /* Active State */
 .bottomNavBar button.active {
   color: var(--login-bg-container);
+  font-weight: bold;
 }
 
 /* Button Icons */
@@ -65,15 +66,11 @@
 }
 
 /* Media Query for Smaller Screens */
-@media screen and (max-width: 1100px) {
-  .content {
-    flex: 1;
-    padding-bottom: 600px;
-  }
+@media screen and (max-width: 600px) {
   .bottomNavBar .icon {
     font-size: 18px;
   }
-  .bottomNavBar .label {
-    display: none;
+  .bottomNavBar button {
+    font-size: 12px;
   }
 }

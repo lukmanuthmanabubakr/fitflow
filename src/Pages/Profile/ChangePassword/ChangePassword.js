@@ -74,21 +74,21 @@ const ChangePassword = () => {
         <h2>Change Password</h2>
 
         <form onSubmit={updatePassword} className="changePassForm">
-          <label>Old Password</label>
+          <label className="com">Old Password</label>
           <PasswordInput
             placeholder="Old Password"
             name="oldPassword"
             value={oldPassword}
             onChange={handleInputChange}
           />
-          <label>New Password</label>
+          <label className="com">New Password</label>
           <PasswordInput
             placeholder="Password"
             name="password"
             value={password}
             onChange={handleInputChange}
           />
-          <label>New Password</label>
+          <label className="com">New Password</label>
           <PasswordInput
             placeholder="Confirm Password"
             name="confirmPassword"

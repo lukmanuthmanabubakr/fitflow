@@ -144,7 +144,7 @@
 
 .save-button {
   align-self: center;
-  background-color: #0066EE;
+  background-color: #0066ee;
   color: #fff;
   padding: 12px 20px;
   border-radius: 50px;
@@ -164,7 +164,7 @@
 }
 
 .save-button:hover {
-  background-color: #0066EE;
+  background-color: #0066ee;
 }
 
 @media (max-width: 768px) {
@@ -177,6 +177,10 @@
   .profile-left {
     margin-bottom: 15px;
   }
+
+  .save-button {
+    margin-bottom: 5rem;
+  }
 }
 @media (max-width: 420px) {
   .profile-card {
@@ -187,5 +191,8 @@
 
   .profile-left {
     margin-bottom: 15px;
+  }
+  .save-button {
+    margin-bottom: 5rem;
   }
 }
