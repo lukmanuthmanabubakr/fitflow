@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
 
     // Cleanup timer on component unmount
     return () => clearTimeout(timer);
@@ -22,7 +22,7 @@ const Home = () => {
         <Loader />
       ) : (
         <>
-          Hello
+          
         </>
       )}
     </>

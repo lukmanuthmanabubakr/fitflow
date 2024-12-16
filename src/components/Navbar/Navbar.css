@@ -24,19 +24,7 @@
   align-items: center;
   gap: 3rem;
 }
-/* .navbar .nav-links a {
-  color: var(--nav-links);
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-.navbar .nav-links a:hover {
-  transform: translateY(-5px);
-  -webkit-transform: translateY(-5px);
-  -moz-transform: translateY(-5px);
-  -ms-transform: translateY(-5px);
-  -o-transform: translateY(-5px);
-} */
-/* Active link dot indicator at the top-right */
+
 .navbar .nav-links .active::after {
   content: "●";
   position: absolute;
@@ -91,8 +79,8 @@
   display: none;
 }
 .navbar .nav-actions .loginButton {
-  background-color: var(--nav-btns-bg);
-  color: var(--nav-btns-text);
+  background-color: var(--nav-btn);
+  color: var(--nav-btn-text);
   padding: 10px 30px;
   border-radius: 30px;
   border: none;
@@ -109,7 +97,7 @@
 }
 
 .navbar .nav-actions .loginButton:hover {
-  background-color: var(--nav-btns-bg-hover);
+  background-color: var(--nav-btn-hover);
 }
 
 .navbar .nav-actions .loginButton:active {
@@ -196,7 +184,7 @@
     position: absolute;
     top: 60px; /* Adjust based on your navbar height */
     right: 10px;
-    background-color: var(--background-color);
+    background-color: var(--nav-bg);
     /* background-color: var(--background-color); */
     box-shadow: var(--navbar-box-shadow) 0px 10px 10px -10px;
     padding: 1rem;
@@ -227,7 +215,7 @@
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: var(--navbar-bg);
+    background-color: var(--nav-bg);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;

@@ -52,19 +52,34 @@ const Navbar = () => {
       </div>
 
       <div className="nav-links">
-        <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "active" : "")}>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           Dashboard
         </NavLink>
-        <NavLink to="/profile" className={({ isActive }) => (isActive ? "active" : "")}>
+        <NavLink
+          to="/profile"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           Profile
         </NavLink>
-        <NavLink to="/settings" className={({ isActive }) => (isActive ? "active" : "")}>
+        <NavLink
+          to="/settings"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           Settings
         </NavLink>
-        <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           About
         </NavLink>
-        <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           Contact
         </NavLink>
       </div>
@@ -89,12 +104,36 @@ const Navbar = () => {
           {showDropdown && (
             <div className="dropdown-menu">
               <div className="linksDivs">
-                <ShowOnLogin>
-                  <NavLink to="/dashboard">Dashboard</NavLink>
-                </ShowOnLogin>
-                <ShowOnLogin>
-                  <NavLink to="/user-profile">Profile</NavLink>
-                </ShowOnLogin>
+                <NavLink
+                  to="/dashboard"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  Dashboard
+                </NavLink>
+                <NavLink
+                  to="/profile"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  Profile
+                </NavLink>
+                <NavLink
+                  to="/settings"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  Settings
+                </NavLink>
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  About
+                </NavLink>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  Contact
+                </NavLink>
               </div>
               <ShowOnLogout>
                 <div className="buttonDivs">

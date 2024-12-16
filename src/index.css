@@ -21,6 +21,8 @@ body {
   --nav-bg: #fff;
   --nav-links: #0066EE;
   --nav-logo: #0066EE;
-  --nav-links-hover: red;
   --nav-dot: #0066EE;
+  --nav-btn: #0066EE;
+  --nav-btn-text: #fff;
+  --nav-btn-hover: #1f79ee;
 }
