@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 const SectionTwo = () => {
   return (
     <div className="sectionTwo">
-      <h1>Explore GreenWood</h1>
+      <h1>Explore FitFlow</h1>
       <div className="sectionTwoContainer">
         <div
           className="secInboxOne"
@@ -29,7 +29,7 @@ const SectionTwo = () => {
           </div>
           <p className="explores">Explore the ecosystem</p>
           <p className="discover">
-            Discover the GreenWood ecosystem, featuring modular infrastructure
+            Discover the FitFlow ecosystem, featuring modular infrastructure
             and rollup technology
           </p>
         </div>

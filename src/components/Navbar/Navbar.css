@@ -16,15 +16,15 @@
 }
 .navbar-brand .logo {
   font-size: 1.5rem;
-  font-weight: bold;
   color: var(--nav-logo);
+  font-weight: 700;
 }
 .navbar .nav-links {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
 }
-.navbar .nav-links a {
+/* .navbar .nav-links a {
   color: var(--nav-links);
   text-decoration: none;
   transition: transform 0.3s ease;
@@ -35,14 +35,57 @@
   -moz-transform: translateY(-5px);
   -ms-transform: translateY(-5px);
   -o-transform: translateY(-5px);
+} */
+/* Active link dot indicator at the top-right */
+.navbar .nav-links .active::after {
+  content: "●";
+  position: absolute;
+  top: -13px; /* Adjust to fit above the link */
+  right: -10px; /* Position towards the top-right */
+  color: var(--nav-dot); /* Add this variable to your CSS variables */
+  font-size: 1.2rem; /* Adjust the size as needed */
 }
+
+/* Hover underline effect */
+.navbar .nav-links a {
+  position: relative;
+  color: var(--nav-links);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -3px; /* Position under the text */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--nav-links); /* Or another hover color */
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navbar .nav-links a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px; /* Position under the text */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--nav-links); /* Same as hover color */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
 .navbar .nav-actions {
   display: flex;
   align-items: center;
   gap: 2rem;
   justify-content: center;
 }
-/* Navbar.css */
 
 .navbar .nav-actions .icon {
   display: none;
@@ -141,7 +184,7 @@
     gap: 0.8rem;
   }
 }
-@media only screen and (max-width: 1064px) {
+@media only screen and (max-width: 900px) {
   .navbar .nav-links {
     display: none;
   }
@@ -184,7 +227,7 @@
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: var(--nav-bg);
+    background-color: var(--navbar-bg);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;

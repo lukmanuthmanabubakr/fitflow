@@ -29,9 +29,9 @@ const ChangeRole = ({ _id, email, isOpen, onClose }) => {
     };
 
     const emailData = {
-      subject: "Account Role Changed - GreenWood",
+      subject: "Account Role Changed - FitFlow",
       send_to: email,
-      reply_to: "noreply@GreenWood",
+      reply_to: "noreply@FitFlow",
       template: "changeRole",
       url: "/login",
     };

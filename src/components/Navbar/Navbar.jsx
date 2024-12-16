@@ -21,11 +21,11 @@ const Navbar = () => {
   const goHome = () => {
     navigate("/");
   };
-  const logoutUser = async () =>  {
+  const logoutUser = async () => {
     dispatch(RESET());
     await dispatch(logout());
-    navigate("/login")
-};
+    navigate("/login");
+  };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -45,15 +45,31 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navCon">
-        <div className="navbar-brand" onClick={goHome}>
-          <NavLink to="/" className="logo">
-            GreenWood
-          </NavLink>
-        </div>
+      <div className="navbar-brand" onClick={goHome}>
+        <NavLink to="/" className="logo">
+          FitFlow
+        </NavLink>
       </div>
+
+      <div className="nav-links">
+        <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "active" : "")}>
+          Dashboard
+        </NavLink>
+        <NavLink to="/profile" className={({ isActive }) => (isActive ? "active" : "")}>
+          Profile
+        </NavLink>
+        <NavLink to="/settings" className={({ isActive }) => (isActive ? "active" : "")}>
+          Settings
+        </NavLink>
+        <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
+          About
+        </NavLink>
+        <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>
+          Contact
+        </NavLink>
+      </div>
+
       <div className="nav-actions">
-        {/* <ThemeToggle className="toggleThemes" /> */}
         <ShowOnLogout>
           <NavLink to="/login" className="loginButton">
             Login
