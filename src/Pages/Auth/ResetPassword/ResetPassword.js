@@ -59,9 +59,6 @@ const ResetPassword = () => {
   return (
     <>
       <div className="rPassAspect">
-        <div className="loginSvg">
-          <img src={resetP} alt="Login" />
-        </div>
         <div className="loginContainer">
           <h2>Reset Password</h2>
           <form onSubmit={reset}>

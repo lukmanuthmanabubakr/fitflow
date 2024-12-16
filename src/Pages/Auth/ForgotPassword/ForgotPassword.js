@@ -38,9 +38,6 @@ const ForgotPassword = () => {
   return (
     <>
       <div className="forgotPassAspect">
-        <div className="loginSvg">
-          <img src={fPass} alt="Login" />
-        </div>
         <div className="loginContainer">
           <h2>Forgot Password</h2>
           <form onSubmit={forgot}>

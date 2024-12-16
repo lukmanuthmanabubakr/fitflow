@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Login.css";
-import LoginSvg from "../../../Assets/omo.svg";
 import { NavLink, useNavigate } from "react-router-dom";
 import PasswordInput from "../../../components/PasswordInput/PasswordInput";
 import { useDispatch, useSelector } from "react-redux";
@@ -77,25 +76,8 @@ const Login = () => {
   return (
     <>
       <div className="loginAspect">
-        <div className="loginSvg">
-          <img src={LoginSvg} alt="Login" />
-        </div>
         <div className="loginContainer">
           <h2>Welcome Back!</h2>
-
-          {/* <div className="loginWithGoogle">
-            <button>Login With Google</button>
-          </div> */}
-          {/* <GoogleLogin
-            onSuccess={googleLogin}
-            onError={() => {
-              console.log("Login Failed");
-              toast.error("Login Failed");
-            }}
-          /> */}
-          <br />
-          {/* <p className="or">OR</p> */}
-
           <form onSubmit={loginUser}>
             <input
               type="email"

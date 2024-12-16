@@ -19,13 +19,12 @@ const initialState = {
   email: "",
   password: "",
   confirmPassword: "",
-  referralCode: "",
 };
 
 const SignUp = () => {
   const [formData, setFormData] = useState(initialState);
 
-  const { name, email, password, confirmPassword, referralCode } = formData;
+  const { name, email, password, confirmPassword } = formData;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -100,7 +99,6 @@ const SignUp = () => {
       name,
       email,
       password,
-      referralCode,
     };
 
     // console.log(userData);
@@ -119,9 +117,6 @@ const SignUp = () => {
   return (
     <>
       <div className="registerAspect">
-        <div className="loginSvg">
-          <img src={signUp} alt="Login" />
-        </div>
         <div className="loginContainer">
           <h2>Register</h2>
           <form onSubmit={registerUser}>
@@ -142,14 +137,6 @@ const SignUp = () => {
               value={email}
               onChange={handleInputChange}
               className="emailInput"
-            />
-            <input
-              type="text"
-              placeholder="Referral code (Optional)"
-              name="referralCode"
-              value={referralCode}
-              onChange={handleInputChange}
-              className="referInput"
             />
             <PasswordInput
               placeholder="Password"

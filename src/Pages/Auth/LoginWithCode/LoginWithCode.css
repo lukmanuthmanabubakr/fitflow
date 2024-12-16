@@ -1,48 +1,33 @@
 .lWithCodePassAspect {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  background: var(--login-bg);
-  height: 90vh;
-  gap: 10rem;
-}
-.lWithCodePassAspect .loginSvg img {
-  height: 500px;
-  width: 500px;
-}
-.lWithCodePassAspect .loginContainer form {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--login-bg);
 }
 
 .lWithCodePassAspect .loginContainer {
-  flex: 1;
+  width: 100%;
   max-width: 400px;
-  padding: 80px 30px 40px 30px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: var(--login-bg-container);
   text-align: center;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  background: var(--login-bg-card);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .lWithCodePassAspect .loginContainer h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--login-bg-h2-color);
+  margin-bottom: 1.5rem;
+  color: var(--login-heading);
+  font-size: 1.75rem;
 }
-.lWithCodePassAspect .loginContainer form .emailInput {
+
+/* Email Input */
+.lWithCodePassAspect .emailInput {
   width: 100%;
   padding: 10px 20px;
-  color: var(--login-input-text);
-  background: var(--login-input-bg);
-  border-radius: 50px;
-  margin-bottom: 15px;
+  color: var(--email-input-text);
+  background: var(--login-bg-container);
   border-radius: 50px;
   font-size: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
@@ -50,277 +35,66 @@
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
-  transition: all ease 400ms;
-  -webkit-transition: all ease 400ms;
-  -moz-transition: all ease 400ms;
-  -ms-transition: all ease 400ms;
-  -o-transition: all ease 400ms;
-}
-.lWithCodePassAspect .loginContainer form .emailInput:focus {
-  border: 1px solid var(--login-input-bg-border);
 }
 
-.lWithCodePassAspect .loginContainer .cEmail {
-    font-size: 12px;
-    transition: all 400ms ease;
-    -webkit-transition: all 400ms ease;
-    -moz-transition: all 400ms ease;
-    -ms-transition: all 400ms ease;
-    -o-transition: all 400ms ease;
+.lWithCodePassAspect .emailInput:focus {
+  border: 1px solid var(--email-input-focus-border);
 }
-.lWithCodePassAspect .loginContainer .submit {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-  color: var(--login-btn-text);
-  background: var(--login-btn-bg);
-  padding: 10px 1.5rem 10px 1.5rem;
+
+/* Button Loader Styling */
+.lWithCodePassAspect .submit {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  border: none;
   border-radius: 50px;
+  background-color: var(--login-btn-bg);
+  color: var(--login-btn-text);
+  cursor: pointer;
+  margin-top: 1.3rem;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease-in-out;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-  cursor: pointer;
-  margin-top: 1rem;
-  transition: all 400ms ease;
-  -webkit-transition: all 400ms ease;
-  -moz-transition: all 400ms ease;
-  -ms-transition: all 400ms ease;
-  -o-transition: all 400ms ease;
-}
-.lWithCodePassAspect .loginContainer .submit:hover {
-  background: var(--login-btn-br-hover);
-  color: var(--login-btn-text-hover);
-}
-.lWithCodePassAspect .loginContainer .forgotPassword {
-  display: flex;
-  justify-content: start;
-  color: var(--UserDontHaveAccount);
-  font-size: 14px;
-}
-.lWithCodePassAspect .loginContainer .UserDontHaveAccount {
-  display: flex;
-  justify-content: start;
-  text-align: center;
-  align-items: center;
-  margin-top: 20px;
-  justify-content: center;
-}
-.lWithCodePassAspect .loginContainer .UserDontHaveAccount p {
-  color: var(--UserDontHaveAccount-p);
-}
-.lWithCodePassAspect .loginContainer .UserDontHaveAccount b {
-  color: var(--UserDontHaveAccount);
-  font-weight: 600;
-  padding-left: 10px;
-  cursor: pointer;
 }
 
-@media only screen and (max-width: 1322px) {
-  .lWithCodePassAspect {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    /* height: 100vh; */
-    gap: 10rem;
-  }
+.lWithCodePassAspect .submit:hover {
+  background-color: var(--login-btn-hover-bg);
 }
-@media only screen and (max-width: 1188px) {
-  .lWithCodePassAspect {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    /* height: 100vh; */
-    gap: 5rem;
-  }
-  .lWithCodePassAspect .loginContainer {
-    flex: 1;
-    max-width: 400px;
-    padding: 40px 15px 30px 15px;
-    text-align: center;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
+/* Forgot Password Link */
+.lWithCodePassAspect .forgotPassword {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--login-link);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
-@media only screen and (max-width: 1011px) {
-  .lWithCodePassAspect {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    /* height: 100vh; */
-    gap: 5rem;
-  }
-  .lWithCodePassAspect .loginSvg img {
-    height: 400px;
-    width: 400px;
-  }
-  .lWithCodePassAspect .loginContainer {
-    flex: 1;
-    max-width: 400px;
-    padding: 40px 15px 30px 15px;
-    text-align: center;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-}
-@media only screen and (max-width: 923px) {
-  .lWithCodePassAspect {
-    display: grid;
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .lWithCodePassAspect .loginSvg img {
-    height: 400px;
-    width: 400px;
-    display: none;
-  }
-  .lWithCodePassAspect .loginContainer {
-    flex: 1;
-    max-width: 400px;
-    padding: 40px 30px 30px 30px;
-    text-align: center;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-}
-@media only screen and (max-width: 657px) {
-  .lWithCodePassAspect {
-    margin-left: -3rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .lWithCodePassAspect .loginSvg img {
-    height: 400px;
-    width: 400px;
-    display: none;
-  }
-  .lWithCodePassAspect .loginContainer {
-    flex: 1;
-    max-width: 400px;
-    padding: 40px 30px 30px 30px;
-    text-align: center;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .lWithCodePassAspect {
-    display: grid;
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-left: -6rem;
-  }}
-@media only screen and (max-width: 422px) {
-  .lWithCodePassAspect {
-    margin-left: -5rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .lWithCodePassAspect .loginSvg img {
-    height: 400px;
-    width: 400px;
-    display: none;
-  }
-  .lWithCodePassAspect .loginContainer {
-    flex: 1;
-    max-width: 400px;
-    padding: 20px 15px 15px 20px;
-    text-align: center;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-  .lWithCodePassAspect .loginContainer h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-}
-@media only screen and (max-width: 395px) {
-  .lWithCodePassAspect {
-    margin-left: -5rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .lWithCodePassAspect .loginSvg img {
-    height: 400px;
-    width: 400px;
-    display: none;
-  }
-  .lWithCodePassAspect .loginContainer {
-    flex: 1;
-    max-width: 400px;
-    padding: 20px 15px 15px 20px;
-    text-align: center;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-  .lWithCodePassAspect .loginContainer h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
 
-  .lWithCodePassAspect .loginContainer .UserDontHaveAccount p {
-    font-size: 14px;
-  }
-  .lWithCodePassAspect .loginContainer .UserDontHaveAccount b {
-    font-weight: 500;
-    padding-left: 10px;
-    font-size: 18px;
-  }
+.lWithCodePassAspect .forgotPassword:hover {
+  color: var(--login-link-hover);
 }
-@media only screen and (max-width: 358px) {
-  .lWithCodePassAspect .loginContainer .UserDontHaveAccount p {
-    color: var(--text-color);
-    font-size: 12px;
-  }
-  .lWithCodePassAspect .loginContainer .UserDontHaveAccount b {
-    color: var(--user-dont-account);
-    font-weight: 500;
-    padding-left: 5px;
-    font-size: 14px;
-  }
+
+/* Don't Have Account */
+.lWithCodePassAspect .UserDontHaveAccount {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.lWithCodePassAspect .UserDontHaveAccount b {
+  display: inline;
+  color: var(--login-heading);
+}
+
+.lWithCodePassAspect .UserDontHaveAccount a {
+  color: var(--login-link);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.lWithCodePassAspect .UserDontHaveAccount a:hover {
+  color: var(--login-link-hover);
 }

@@ -55,9 +55,6 @@ const LoginWithCode = () => {
   return (
     <>
       <div className="lWithCodePassAspect">
-        <div className="loginSvg">
-          <img src={sCode} alt="Login" />
-        </div>
         <div className="loginContainer">
           <h2>Enter Access Code</h2>
           <form onSubmit={loginUserWithCode}>

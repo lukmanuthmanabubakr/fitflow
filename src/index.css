@@ -25,4 +25,16 @@ body {
   --nav-btn: #0066EE;
   --nav-btn-text: #fff;
   --nav-btn-hover: #1f79ee;
+
+  --login-bg: #f2f2f2;
+  --login-bg-container: #fff;
+  --login-heading: #0066EE;
+  --email-input-border: #0066EE;
+  --email-input-text: #191919;
+  --email-input-focus-border: #1f79ee;
+  --login-btn-bg: #0066EE;
+  --login-btn-text: #fff;
+  --login-btn-hover-bg: #1f79ee;
+  --login-link: #0066EE;
+  --login-link-hover: #1f79ee;
 }

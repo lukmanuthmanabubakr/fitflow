@@ -22,7 +22,9 @@ const Home = () => {
         <Loader />
       ) : (
         <>
-          
+          <div>
+            
+          </div>
         </>
       )}
     </>
