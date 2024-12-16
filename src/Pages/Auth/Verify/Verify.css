@@ -5,12 +5,12 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--green-dark), var(--green-light));
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
 }
 
 /* Card Layout for Verification Box */
 .verifyAccount-card {
-  background: var(--login-bg-card);
+  background: var(--login-bg-container);
   border-radius: 12px;
   padding: 40px;
   width: 100%;
@@ -24,7 +24,7 @@
 /* Icon styling */
 .verify-icon {
   font-size: 60px;
-  color: var(--green-primary); /* Green color for success */
+  color: var(--login-heading); /* Green color for success */
   margin-bottom: 20px;
   animation: bounce 1s infinite alternate;
 }
@@ -32,36 +32,38 @@
 /* Title Styling */
 .verifyAccount-card h2 {
   font-size: 26px;
-  color: var(--green-dark);
+  color: var(--login-btn-hover-bg);
   margin-bottom: 12px;
 }
 
 /* Text Styling */
 .verifyAccount-card p {
-  color: var(--text-dark);
+  color: var(--email-input-text);
   font-size: 18px;
   margin-bottom: 25px;
 }
 
 /* Button Styling with Green Gradient */
 .verify-button {
-  padding: 12px 24px;
-  background: linear-gradient(135deg, var(--green-dark), var(--green-primary)); /* Green gradient for the button */
-  color: var(--text-light);
-  font-size: 16px;
-  font-weight: bold;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.2rem;
   border: none;
-  border-radius: 30px;
+  border-radius: 50px;
+  background-color: var(--login-btn-bg);
+  color: var(--login-btn-text);
   cursor: pointer;
-  transition: background 0.3s ease;
-  box-shadow: 0px 4px 12px rgba(45, 106, 79, 0.3);
-  display: inline-block;
-  margin: 0 auto;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease-in-out;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 /* Button Hover Effects */
 .verify-button:hover {
-  background: linear-gradient(135deg, var(--green-primary), var(--green-dark)); /* Reverse gradient on hover */
+  background-color: var(--login-btn-hover-bg);
 }
 
 /* Fade-in Animation */

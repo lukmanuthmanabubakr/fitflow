@@ -1,5 +1,3 @@
-/* UserProfile.css */
-
 .profile-left .nameOfUserProfle {
   margin-bottom: 5px;
   font-size: 1.5rem;
@@ -15,7 +13,7 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  border: 2px solid var(--nav-btns-bg);
+  border: 2px solid var(--login-heading);
 }
 /* UserProfile.css */
 
@@ -28,7 +26,6 @@
   margin-bottom: auto;
   padding: 20px;
   background-color: var(--login-bg-card);
-  overflow-y: auto;
 }
 
 .profile-header {
@@ -147,10 +144,10 @@
 
 .save-button {
   align-self: center;
-  background-color: #4caf50;
+  background-color: #0066EE;
   color: #fff;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 50px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -160,10 +157,14 @@
   -ms-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   width: 100%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 .save-button:hover {
-  background-color: #388e3c;
+  background-color: #0066EE;
 }
 
 @media (max-width: 768px) {

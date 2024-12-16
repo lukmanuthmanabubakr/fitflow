@@ -44,14 +44,12 @@ const Profile = () => {
           className={activeContent === "user" ? "active" : ""}
         >
           <FaUser className="icon" />
-          <span className="label">Profile</span>
         </button>
         <button
           onClick={() => handleContentChange("security")}
           className={activeContent === "security" ? "active" : ""}
         >
           <GoLock className="icon" />
-          <span className="label">Security</span>
         </button>
         <AdminAuthorLink>
           <button
@@ -59,12 +57,10 @@ const Profile = () => {
             className={activeContent === "team" ? "active" : ""}
           >
             <FaUsers className="icon" />
-            <span className="label">Users</span>
           </button>
         </AdminAuthorLink>
         <button onClick={logoutUser}>
           <BiLogOut className="icon" />
-          <span className="label">Logout</span>
         </button>
       </div>
     </div>
