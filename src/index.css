@@ -39,4 +39,14 @@ body {
   --blue-dark: #005cd6;
   --blue-light: #4d94f3;
   --login-link-hover: #1f79ee;
+
+  --hero-bg: #f9f9f9;
+  --hero-title: #005cd6;
+  --hero-highlight: #0066EE;
+  --hero-description: #333;
+  --hero-button-bg: #0066EE;
+  --hero-button-hover: #1f79ee;
+  --hero-button-text: #fff;
+  --image-placeholder-bg: #e0e0e0;
+  --image-placeholder-text: #aaa;
 }

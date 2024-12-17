@@ -22,9 +22,9 @@ const Home = () => {
         <Loader />
       ) : (
         <>
-          <div>
+          <section className="hero-section">
             
-          </div>
+          </section>
         </>
       )}
     </>
