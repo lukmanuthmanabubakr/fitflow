@@ -96,9 +96,6 @@ const Login = () => {
             />
             {/* <input
             type="password"
-            name="password"
-            value={password}
-            onChange={handleInputChange}
           /> */}
           
             {/* <button className="submit" type="submit">
