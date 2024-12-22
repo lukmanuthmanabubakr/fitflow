@@ -6,8 +6,8 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  background-color: var(--nav-bg);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  background-color: var(--background-color);
+  box-shadow: var(--navbar-box-shadow) 0px 10px 10px -10px;
 }
 .navbar .navCon {
   display: flex;
@@ -16,88 +16,53 @@
 }
 .navbar-brand .logo {
   font-size: 1.5rem;
-  color: var(--nav-logo);
-  font-weight: 700;
+  font-weight: bold;
+  color: var(--primary-color);
 }
 .navbar .nav-links {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
-
-.navbar .nav-links .active::after {
-  content: "●";
-  position: absolute;
-  top: -13px; /* Adjust to fit above the link */
-  right: -10px; /* Position towards the top-right */
-  color: var(--nav-dot); /* Add this variable to your CSS variables */
-  font-size: 1.2rem; /* Adjust the size as needed */
-}
-
-/* Hover underline effect */
 .navbar .nav-links a {
-  position: relative;
-  color: var(--nav-links);
+  color: var(--text-color);
   text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.navbar .nav-links a:hover::before {
-  content: "";
-  position: absolute;
-  bottom: -3px; /* Position under the text */
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--nav-links); /* Or another hover color */
-  transform: scaleX(1);
-  transform-origin: left;
   transition: transform 0.3s ease;
 }
-
-.navbar .nav-links a::before {
-  content: "";
-  position: absolute;
-  bottom: -3px; /* Position under the text */
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--nav-links); /* Same as hover color */
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
+.navbar .nav-links a:hover {
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
 }
-
 .navbar .nav-actions {
   display: flex;
   align-items: center;
   gap: 2rem;
   justify-content: center;
 }
+/* Navbar.css */
 
 .navbar .nav-actions .icon {
   display: none;
 }
 .navbar .nav-actions .loginButton {
-  background-color: var(--nav-btn);
-  color: var(--nav-btn-text);
+  background-color: var(--login-button-bg); /* Dark Purple */
+  color: var(--login-button-text); /* White text */
   padding: 10px 30px;
-  border-radius: 30px;
-  border: none;
+  border-radius: 5px;
   font-size: 16px;
   font-weight: 500;
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
 }
 
 .navbar .nav-actions .loginButton:hover {
-  background-color: var(--nav-btn-hover);
+  background-color: var(--login-button-bg-hover);
+  transform: translateY(-3px);
 }
 
 .navbar .nav-actions .loginButton:active {
@@ -114,6 +79,14 @@
   box-shadow: 0 0 0 3px var(--login-button-bg); /* Focus shadow in Dark Purple */
 }
 
+.navbar .nav-actions .notificationBell {
+  background: none;
+  font-size: 1.5rem;
+  display: inline-block;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: transform 0.3s ease-in-out;
+}
 
 
 
@@ -172,7 +145,7 @@
     gap: 0.8rem;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1064px) {
   .navbar .nav-links {
     display: none;
   }
@@ -184,7 +157,7 @@
     position: absolute;
     top: 60px; /* Adjust based on your navbar height */
     right: 10px;
-    background-color: var(--nav-bg);
+    background-color: var(--background-color);
     /* background-color: var(--background-color); */
     box-shadow: var(--navbar-box-shadow) 0px 10px 10px -10px;
     padding: 1rem;
@@ -195,7 +168,7 @@
     display: inline-block;
     cursor: pointer;
     font-size: 1.5rem;
-    color: var(--nav-links);
+    color: var(--text-color);
   }
 
   .navbar .profileText {
@@ -215,8 +188,8 @@
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: var(--nav-bg);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    background-color: var(--background-color);
+    box-shadow: var(--media-query) -1.95px 1.95px 2.6px;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     padding-left: 0.5rem;
@@ -225,7 +198,7 @@
     flex-direction: column;
     gap: 10rem;
     width: 20rem;
-    /* height: 20rem; */
+    height: 20rem;
     overflow-y: auto;
     border-bottom-left-radius: 10px;
     transform: translateY(-100%);
@@ -254,13 +227,13 @@
   }
 
   .dropdown-menu a {
-    color: var(--nav-links);
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
   }
   .dropdown-menu .buttonDivs button {
-    color: var(--nav-links);
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 700;
@@ -274,9 +247,6 @@
     -ms-transform: translateY(-5px);
     -o-transform: translateY(-5px);
   }
-  .navbar .nav-actions .loginButton {
-    display: none;
-  }
 }
 
 
@@ -285,6 +255,8 @@
     position: absolute;
     top: 100%;
     right: 0;
+    background-color: var(--background-color);
+    box-shadow: var(--media-query) -1.95px 1.95px 2.6px;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     padding-left: 0.5rem;
@@ -293,6 +265,7 @@
     flex-direction: column;
     gap: 10rem;
     width: 15rem;
+    height: 20rem;
     overflow-y: auto;
     border-bottom-left-radius: 10px;
     transform: translateY(-100%);
@@ -308,6 +281,8 @@
     position: absolute;
     top: 100%;
     right: 0;
+    background-color: var(--background-color);
+    box-shadow: var(--media-query) -1.95px 1.95px 2.6px;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     padding-left: 0.5rem;
@@ -316,6 +291,7 @@
     flex-direction: column;
     gap: 10rem;
     width: 12rem;
+    height: 20rem;
     overflow-y: auto;
     border-bottom-left-radius: 10px;
     transform: translateY(-100%);
@@ -336,7 +312,11 @@
   .navbar {
     padding: 0.5rem;
   }
-
+  .navbar-brand .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
 }
 
 /* Medium devices (phones, 481px and up) */
@@ -348,6 +328,7 @@
   .navbar-brand .logo {
     font-size: 1.2rem;
     font-weight: bold;
+    color: var(--primary-color);
   }
   .navbar .nav-actions .loginButton {
     background-color: var(--login-button-bg); /* Dark Purple */

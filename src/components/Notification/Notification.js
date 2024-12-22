@@ -1,10 +1,11 @@
 
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { RESET, sendVerificationEmail } from "../../redux/features/auth/authSlice";
-import { FiAlertCircle } from "react-icons/fi"; // Alert icon
-import "./Notification.css";
-import ButtonLoader from "../ButtonLoader/ButtonLoader";
+import { useDispatch } from "react-redux";
+import {
+  RESET,
+  sendVerificationEmail,
+} from "../../redux/features/auth/authSlice";
+
 
 const Notification = () => {
   const dispatch = useDispatch();
@@ -14,20 +15,19 @@ const Notification = () => {
     await dispatch(RESET());
   };
 
-  const { isLoading } =
-  useSelector((state) => state.auth);
-
   return (
-    <div className="notification-container">
-      <div className="notification-card">
-        <FiAlertCircle className="alert-icon" />
-        <div className="notification-content">
-          <p><b>Account Verification Needed</b></p>
-          <p>Check your email for a verification link to activate your account.</p>
-          <ButtonLoader isLoading={isLoading} className="resend-button" onClick={sendVerEmail}>
-            Resend Verification Link
-          </ButtonLoader>
-        </div>
+    <div className="container">
+      <div className="alert">
+        <p>
+          <b>Message:</b> &nbsp;
+        </p>
+        <p>
+          To verify your account, check your email for a verification link.
+          &nbsp;
+        </p>
+        <p className="v-link" onClick={sendVerEmail}>
+          <b>Resend Link</b>
+        </p>
       </div>
     </div>
   );

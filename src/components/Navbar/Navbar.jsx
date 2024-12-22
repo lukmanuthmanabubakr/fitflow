@@ -9,7 +9,7 @@ import { IoNotifications } from "react-icons/io5";
 import { IoMdMore } from "react-icons/io";
 import NavSearch from "../NavSearch/NavSearch";
 import { UserImage } from "../../Pages/Profile/UserProfile/UserProfile";
-import { AiOutlineMenuFold } from "react-icons/ai";
+import MediaSearch from "../MediaSearch/MediaSearch";
 import SearchContent from "../SearchContent/SearchContent";
 
 const Navbar = () => {
@@ -45,46 +45,35 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-brand" onClick={goHome}>
-        <NavLink to="/" className="logo">
-          FitFlow
-        </NavLink>
+      <div className="navCon">
+        <div className="navbar-brand" onClick={goHome}>
+          <NavLink to="/" className="logo">
+            TrackItNow
+          </NavLink>
+        </div>
+        <div className="nav-links">
+          <ShowOnLogin>
+            <NavLink to="/dashboard">Dashboard</NavLink>
+            <NavLink to="/goals">Goals</NavLink>
+            <NavLink to="/habits">Habits</NavLink>
+            <NavLink to="/journal">Journal</NavLink>
+            <NavLink to="/community">Community</NavLink>
+            <NavLink to="/resources">Resources</NavLink>
+            <NavLink to="/user-profile" className="profileText">
+              Profile
+            </NavLink>
+          </ShowOnLogin>
+        </div>
       </div>
-
-      <div className="nav-links">
-        <NavLink
-          to="/dashboard"
-          className={({ isActive }) => (isActive ? "active" : "")}
-        >
-          Dashboard
-        </NavLink>
-        <NavLink
-          to="/profile"
-          className={({ isActive }) => (isActive ? "active" : "")}
-        >
-          Profile
-        </NavLink>
-        <NavLink
-          to="/settings"
-          className={({ isActive }) => (isActive ? "active" : "")}
-        >
-          Settings
-        </NavLink>
-        <NavLink
-          to="/about"
-          className={({ isActive }) => (isActive ? "active" : "")}
-        >
-          About
-        </NavLink>
-        <NavLink
-          to="/contact"
-          className={({ isActive }) => (isActive ? "active" : "")}
-        >
-          Contact
-        </NavLink>
-      </div>
-
       <div className="nav-actions">
+        <ShowOnLogin>
+          <SearchContent />
+          {/* <MediaSearch /> */}
+          <NavLink to="/notifications" className="notificationBell">
+            <IoNotifications />
+          </NavLink>
+        </ShowOnLogin>
+        <ThemeToggle className="toggleThemes" />
         <ShowOnLogout>
           <NavLink to="/login" className="loginButton">
             Login
@@ -94,60 +83,30 @@ const Navbar = () => {
           <NavLink to="/user-profile" className="profileImg">
             <UserImage />
           </NavLink>
-        </ShowOnLogin>
-        <div
-          ref={moreOptionsRef}
-          className="more-options"
-          onClick={() => setShowDropdown(!showDropdown)}
-        >
-          <AiOutlineMenuFold className="icon" />
-          {showDropdown && (
-            <div className="dropdown-menu">
-              <div className="linksDivs">
-                <NavLink
-                  to="/dashboard"
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                >
-                  Dashboard
-                </NavLink>
-                <NavLink
-                  to="/profile"
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                >
-                  Profile
-                </NavLink>
-                <NavLink
-                  to="/settings"
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                >
-                  Settings
-                </NavLink>
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                >
-                  About
-                </NavLink>
-                <NavLink
-                  to="/contact"
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                >
-                  Contact
-                </NavLink>
-              </div>
-              <ShowOnLogout>
-                <div className="buttonDivs">
-                  <NavLink to="/login">Login</NavLink>
+          <div
+            ref={moreOptionsRef}
+            className="more-options"
+            onClick={() => setShowDropdown(!showDropdown)}
+          >
+            <IoMdMore className="icon" />
+            {showDropdown && (
+              <div className="dropdown-menu">
+                <div className="linksDivs">
+                  <NavLink to="/dashboard">Dashboard</NavLink>
+                  <NavLink to="/goals">Goals</NavLink>
+                  <NavLink to="/habits">Habits</NavLink>
+                  <NavLink to="/journal">Journal</NavLink>
+                  <NavLink to="/community">Community</NavLink>
+                  <NavLink to="/resources">Resources</NavLink>
+                  <NavLink to="/user-profile">Profile</NavLink>
                 </div>
-              </ShowOnLogout>
-              <ShowOnLogin>
                 <div className="buttonDivs">
                   <button onClick={logoutUser}>Logout</button>
                 </div>
-              </ShowOnLogin>
-            </div>
-          )}
-        </div>
+              </div>
+            )}
+          </div>
+        </ShowOnLogin>
       </div>
     </nav>
   );

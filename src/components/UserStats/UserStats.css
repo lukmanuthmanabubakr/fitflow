@@ -1,136 +1,67 @@
-.userStats {
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  overflow-y: auto;
-  max-height: 100%;
+.userStats{
 }
-
-.allUserImage {
-  height: 2.5rem;
-  width: 2.5rem;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border: 2px solid var(--nav-logo);
+.UserList {
+  margin-left: 5rem;
+  padding: 20px;
+  margin-top: 20px;
+  overflow-x: hidden;
 }
 
 .userCon {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 
-.userCon h2 {
-  font-size: 24px;
-  color: #002855;
-}
-
-.userCardContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.userCard {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  position: relative;
-}
-
-.cardHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.userImage {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.menuIcon {
-  cursor: pointer;
-}
-
-.dropdown-menu-role {
-  position: absolute;
-  top: 35px;
-  right: 10px;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-  padding: 8px 0;
-  border-radius: 4px;
-  width: 120px;
-}
-
-.dropdown-menu-role button {
-  display: block;
+table {
   width: 100%;
-  background: none;
-  border: none;
-  padding: 8px 12px;
+  border-collapse: collapse;
+  margin-top: 20px;
+  /* background: red; */
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid var(--primary-color);
   text-align: left;
+}
+
+.UserList th {
+  background-color: var(--background-color);
+}
+
+td {
+  font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.page-num {
+  margin: 0 5px;
+  padding: 8px 12px;
+  background-color: var(--background-color);
+  color: var(--text-color);
   cursor: pointer;
-  color: #333;
-  font-size: 14px;
+  list-style-type: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.dropdown-menu-role button:hover {
-  background-color: #f0f0f0;
+.activePage {
+  background-color: #333;
+  color: white;
+  list-style-type: none;
 }
 
-.cardBody {
-  margin-top: 10px;
-}
+@media only screen and (max-width: 824px) {
 
-.cardBody h3 {
-  font-size: 16px;
-  margin: 5px 0;
-  color: #002855;
-}
-
-.cardBody p {
-  font-size: 14px;
-  color: #6b7280;
-}
-@media (max-width: 586px) {
-  .userCardContainer {
-    height: 20em;
-    overflow-y: auto;
-  }
-  .userCon {
-    display: grid;
-    gap: 10px;
-    margin-top: 1rem;
-  }
-  .userCon h2 {
-    font-size: 18px;
-    color: #002855;
-  }
-}
-@media (max-width: 421px) {
-  .userStats {
-    padding: 8px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-  }
-}
-@media (max-width: 391px) {
-  .userCard {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 7px;
-    position: relative;
-  }
 }

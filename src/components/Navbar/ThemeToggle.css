@@ -2,7 +2,7 @@
   background: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: var(--nav-links);
+  color: var(--text-color);
   transition: transform 0.3s ease;
 }
 

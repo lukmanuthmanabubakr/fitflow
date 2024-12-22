@@ -1,114 +1,359 @@
-/* General styling for the InfoBox */
 .infoBox {
+  /* width: 100%; */
   padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  background-color: var(--background-color);
+  margin-left: 5rem;
 }
 
 .infoBox h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: center;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 1.2rem;
 }
 
-/* Container for individual info boxes */
-.infoContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
+.infoBox .infoContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
 }
 
-/* Individual info box */
 .theInfoBox {
-  display: flex;
-  align-items: center;
-  background-color: #f4f4f4;
-  padding: 15px;
+  background-color: var(--login-Container-bg);
+  box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+    var(--login-Container-shadow) 0px 2px 6px 2px;
   border-radius: 8px;
-  width: calc(25% - 15px); /* For large screens, 4 boxes per row */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
   text-align: center;
+  transition: transform 0.3s;
 }
 
 .theInfoBox:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
 }
 
-/* Icon style */
-.iIcon {
+.infoBox .theInfoBox .iIcon {
   font-size: 30px;
-  color: #0066EE; /* Green color for the icons */
-  margin-right: 15px;
+  margin-bottom: 10px;
+  color: var(--text-color);
 }
 
-/* Details section within each info box */
 .infoDeatils {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.infoText {
-  font-size: 14px;
-  color: #666;
+.infoBox .theInfoBox .infoDeatils  .infoText {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 
-.num {
-  font-size: 20px;
-  font-weight: bold;
-  color: #0066EE; /* Green for numbers */
+.infoBox .theInfoBox .infoDeatils  .num {
+  font-size: 24px;
+  font-weight: 600;
+  /* color: #4b0082; */
 }
 
-/* Responsiveness for small screens */
-@media (max-width: 768px) {
+@media screen and (max-width: 1186px) {
+  .infoBox h2 {
+    font-size: 2.3rem;
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+  }
+  .infoBox .infoContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
   .theInfoBox {
-    width: calc(50% - 15px); /* For small screens, 2 boxes per row */
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
   }
 }
-
-@media (max-width: 586px) {
+@media screen and (max-width: 1076px) {
+  .infoBox h2 {
+    font-size: 2.3rem;
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+  }
+  .infoBox .infoContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .theInfoBox {
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .infoBox .theInfoBox .infoDeatils  .infoText {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .infoBox .infoContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .theInfoBox {
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+}
+@media screen and (max-width: 969px) {
+  .infoBox .infoContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .theInfoBox {
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .infoBox .theInfoBox .infoDeatils  .infoText {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 930px) {
   .infoBox {
-    height: 15rem;
-    overflow-y: auto;
+    /* width: 100%; */
+    padding: 20px;
+    background-color: var(--background-color);
+    margin-left: 4rem;
   }
+  
+  .infoBox .infoContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
   .theInfoBox {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
   }
-
-  .iIcon {
-    margin-bottom: 10px;
-  }
-
-  .infoDeatils {
-    align-items: flex-start;
-  }
-
-  .num {
-    font-size: 18px;
+  .infoBox .theInfoBox .infoDeatils  .infoText {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: 600;
   }
 }
 
-@media (max-width: 391px) {
-  .infoBox {
-    padding: 8px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+@media screen and (max-width: 797px) {
+  .theInfoBox {
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
   }
 }
-@media (max-width: 381px) {
+@media screen and (max-width: 746px) {
+  .infoBox .infoContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
   .theInfoBox {
-    padding: 5px;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+}
+@media screen and (max-width: 678px) {
+  .infoBox .infoContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .theInfoBox {
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+}
+@media screen and (max-width: 598px) {
+  .infoBox .infoContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .theInfoBox {
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+}
+@media screen and (max-width: 576px) {
+  .infoBox .infoContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .theInfoBox {
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+}
+@media screen and (max-width: 537px) {
+  .infoBox .infoContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .theInfoBox {
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+}
+@media screen and (max-width: 420px) {
+  .infoBox .infoContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .theInfoBox {
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+}
+@media screen and (max-width: 366px) {
+  .infoBox .infoContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .theInfoBox {
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+}
+@media screen and (max-width: 320px) {
+  .infoBox .infoContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .theInfoBox {
+    background-color: var(--login-Container-bg);
+    box-shadow: var(--login-Container-shadow) 0px 1px 2px 0px,
+      var(--login-Container-shadow) 0px 2px 6px 2px;
+    border-radius: 8px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s;
   }
 }

@@ -1,5 +1,50 @@
+/* .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--loader-bg); 
+    backdrop-filter: blur(10px);
+  }
+  
+  .trackitnow-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .loader-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--loader-text);
+    margin-bottom: 20px;
+    animation: text-animation 1.5s ease-in-out infinite;
+  }
+  
+  .loader-circle {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--primary-color);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes text-animation {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+   */
 
-.p-loader-container {
+  
+/* Loader Container */
+.loader-container {
   position: fixed; /* Make the loader fixed to the viewport */
   top: 0;
   left: 0;
@@ -8,13 +53,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var( --nav-bg); /* Use the dynamic loader background */
+  background-color: var(--loader-bg); /* Use the dynamic loader background */
   backdrop-filter: blur(10px); /* Apply the blur effect */
-  z-index: 1000;
+  z-index: 1000; /* Ensure it is on top of other elements */
 }
 
 /* Loader Wrapper */
-.p-FitFlow-loader {
+.trackitnow-loader {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,19 +68,19 @@
 }
 
 /* Loader Text */
-.p-loader-text {
+.loader-text {
   font-size: 24px;
   font-weight: bold;
-  color: var( --nav-logo);
+  color: var(--loader-text);
   margin-bottom: 20px;
   animation: text-animation 1.5s ease-in-out infinite;
 }
 
 /* Loader Circle */
-.p-loader-circle {
+.loader-circle {
   width: 50px;
   height: 50px;
-  border: 5px solid var(--section-3-bg);
+  border: 5px solid var(--primary-color); /* Use your primary color variable */
   border-top-color: transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite;
