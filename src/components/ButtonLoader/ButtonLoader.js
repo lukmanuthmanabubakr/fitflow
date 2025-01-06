@@ -1,6 +1,6 @@
 // ButtonLoader.js
 import React from "react";
-import "./ButtonLoader.css"; // Make sure to create a corresponding CSS file for styling
+import "./ButtonLoader.css"; // Make sure to create a corresponding
 
 const ButtonLoader = ({ isLoading, children, ...props }) => {
   return (
