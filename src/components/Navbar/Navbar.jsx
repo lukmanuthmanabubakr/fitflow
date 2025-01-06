@@ -5,8 +5,8 @@ import ThemeToggle from "./ThemeToggle";
 import { useDispatch } from "react-redux";
 import { logout, RESET } from "../../redux/features/auth/authSlice";
 import { ShowOnLogin, ShowOnLogout } from "../protect/hiddenLink";
-import { IoNotifications } from "react-icons/io5";
-import { IoMdMore } from "react-icons/io";
+import { TbMenuDeep } from "react-icons/tb";
+
 import NavSearch from "../NavSearch/NavSearch";
 import { UserImage } from "../../Pages/Profile/UserProfile/UserProfile";
 import MediaSearch from "../MediaSearch/MediaSearch";
@@ -48,32 +48,21 @@ const Navbar = () => {
       <div className="navCon">
         <div className="navbar-brand" onClick={goHome}>
           <NavLink to="/" className="logo">
-            TrackItNow
+            FitFlow
           </NavLink>
-        </div>
-        <div className="nav-links">
-          <ShowOnLogin>
-            <NavLink to="/dashboard">Dashboard</NavLink>
-            <NavLink to="/goals">Goals</NavLink>
-            <NavLink to="/habits">Habits</NavLink>
-            <NavLink to="/journal">Journal</NavLink>
-            <NavLink to="/community">Community</NavLink>
-            <NavLink to="/resources">Resources</NavLink>
-            <NavLink to="/user-profile" className="profileText">
-              Profile
-            </NavLink>
-          </ShowOnLogin>
         </div>
       </div>
-      <div className="nav-actions">
+      <div className="nav-links">
         <ShowOnLogin>
-          <SearchContent />
-          {/* <MediaSearch /> */}
-          <NavLink to="/notifications" className="notificationBell">
-            <IoNotifications />
-          </NavLink>
+          <NavLink to="/dashboard">Dashboard</NavLink>
         </ShowOnLogin>
-        <ThemeToggle className="toggleThemes" />
+        <NavLink to="/goals">About</NavLink>
+        <NavLink to="/resources">Contact Us</NavLink>
+        <NavLink to="/user-profile" className="profileText">
+          Profile
+        </NavLink>
+      </div>
+      <div className="nav-actions">
         <ShowOnLogout>
           <NavLink to="/login" className="loginButton">
             Login
@@ -83,30 +72,32 @@ const Navbar = () => {
           <NavLink to="/user-profile" className="profileImg">
             <UserImage />
           </NavLink>
-          <div
-            ref={moreOptionsRef}
-            className="more-options"
-            onClick={() => setShowDropdown(!showDropdown)}
-          >
-            <IoMdMore className="icon" />
-            {showDropdown && (
-              <div className="dropdown-menu">
-                <div className="linksDivs">
-                  <NavLink to="/dashboard">Dashboard</NavLink>
-                  <NavLink to="/goals">Goals</NavLink>
-                  <NavLink to="/habits">Habits</NavLink>
-                  <NavLink to="/journal">Journal</NavLink>
-                  <NavLink to="/community">Community</NavLink>
-                  <NavLink to="/resources">Resources</NavLink>
-                  <NavLink to="/user-profile">Profile</NavLink>
-                </div>
-                <div className="buttonDivs">
-                  <button onClick={logoutUser}>Logout</button>
-                </div>
-              </div>
-            )}
-          </div>
         </ShowOnLogin>
+
+        <div
+          ref={moreOptionsRef}
+          className="more-options"
+          onClick={() => setShowDropdown(!showDropdown)}
+        >
+          <TbMenuDeep className="icon" />
+          {showDropdown && (
+            <div className="dropdown-menu">
+              <div className="linksDivs">
+                <ShowOnLogin>
+                  <NavLink to="/dashboard">Dashboard</NavLink>{" "}
+                </ShowOnLogin>
+                <NavLink to="/goals">About</NavLink>
+                <NavLink to="/resources">Contact Us</NavLink>
+                <ShowOnLogin>
+                  <NavLink to="/user-profile">Profile</NavLink>{" "}
+                </ShowOnLogin>
+              </div>
+              <div className="buttonDivs">
+                <button onClick={logoutUser}>Logout</button>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );

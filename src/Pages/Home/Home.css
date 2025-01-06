@@ -1,0 +1,74 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers everything horizontally */
+  overflow: hidden;
+}
+
+.hero-section .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dim the background image */
+  z-index: 1;
+}
+
+.hero-section .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column; /* Stack the text and button vertically */
+  align-items: center; /* Centers text and button horizontally */
+  justify-content: center; /* Centers text and button vertically */
+}
+
+.hero-section .hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-section .hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-section .hero-btn {
+  padding: 1rem 8rem;
+  font-size: 1.2rem;
+  background-color: var(--nav-btn);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.hero-section .hero-btn:hover {
+  background-color: var(--nav-btn-hover);
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-section .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .hero-section .hero-btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+  }
+}
