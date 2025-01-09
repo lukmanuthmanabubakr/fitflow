@@ -88,7 +88,7 @@ const UserProfile = () => {
         console.log(imgData);
         imageURL = imgData.url.toString();
       }
-      // Save profile to MongoDB
+      // Save profile data to MongoDB
       const userData = {
         name: profile.name,
         phone: profile.phone,
