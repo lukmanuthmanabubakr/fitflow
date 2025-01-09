@@ -55,7 +55,7 @@ const UserProfile = () => {
   };
 
   const handleImageClick = () => {
-    // Trigger the file input click when the image is clicked
+    // the file input click when the image is clicked
     fileInputRef.current.click();
   };
 
