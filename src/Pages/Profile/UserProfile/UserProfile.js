@@ -55,7 +55,7 @@ const UserProfile = () => {
   };
 
   const handleImageClick = () => {
-    // Trigger the file input click when the image is clicked
+    // the file when the image is clicked
     fileInputRef.current.click();
   };
 
@@ -88,7 +88,7 @@ const UserProfile = () => {
         console.log(imgData);
         imageURL = imgData.url.toString();
       }
-      // Save profile to MongoDB
+      // Save profile data to MongoDB
       const userData = {
         name: profile.name,
         phone: profile.phone,
