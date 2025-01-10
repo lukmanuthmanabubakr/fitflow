@@ -35,7 +35,7 @@ const Advert = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prevIndex) => (prevIndex + 1) % sentences.length);
-        }, 2000); // Change text every 2 seconds
+        }, 2000); // Change text every 2
 
         return () => clearInterval(interval);
     }, [sentences.length]);
