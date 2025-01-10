@@ -13,7 +13,7 @@ const AllTransactionHistory = () => {
   const [error, setError] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null); // Track the selected item for the modal
 
-  // useEffect(() => {
+  // (() => {
   //   axios.get('http://localhost:8000/api/invest/getTransactionHistory')
   //     .then(response => {
   //       const { history } = response.data;
