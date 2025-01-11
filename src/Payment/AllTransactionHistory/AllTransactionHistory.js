@@ -19,7 +19,6 @@ const AllTransactionHistory = () => {
  
 
   //       // Merge transactions and investments with common fields
-  //       const mergedHistory = history.map(item => ({
   //         type: item.transactionId ? 'Transaction' : 'Investment',
   //         timestamp: item.transactionId ? item.createdAt : item.startDate,
   //       }));
