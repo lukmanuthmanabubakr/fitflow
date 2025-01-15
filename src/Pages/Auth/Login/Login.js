@@ -94,11 +94,7 @@ const Login = () => {
               value={password}
               onChange={handleInputChange}
             />
-            {/* <input
-
-          
-              Login
-            </button> */}
+            
             <ButtonLoader className="submit" type="submit" isLoading={isLoading}>
             Login
           </ButtonLoader>
