@@ -20,7 +20,6 @@ const AllTransactionHistory = () => {
 
   //       // Merge transactions and investments with common fields
   //         timestamp: item.transactionId ? item.createdAt : item.startDate,
-  //       }));
 
   //       // Sort merged history by timestamp
   //       const sortedHistory = mergedHistory.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
