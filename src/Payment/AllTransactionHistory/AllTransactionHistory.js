@@ -20,7 +20,7 @@ const AllTransactionHistory = () => {
   //         timestamp: item.transactionId ? item.createdAt : item.startDate,
 
   //       // Sort merged history by timestamp
-  //       const sortedHistory = mergedHistory.sort((a, b) => new Date(b.timestamp)
+  //       const timestamp)
   //       setLoading(false);
   //     })
   //     .catch(err => {
