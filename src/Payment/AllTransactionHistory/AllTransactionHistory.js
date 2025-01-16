@@ -13,8 +13,6 @@ const AllTransactionHistory = () => {
   const [error, setError] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null); // Track the selected item for the modal
 
-  // (() => {
-  //   axios.get(')
 
  
 
@@ -22,9 +20,7 @@ const AllTransactionHistory = () => {
   //         timestamp: item.transactionId ? item.createdAt : item.startDate,
 
   //       // Sort merged history by timestamp
-  //       const sortedHistory = mergedHistory.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-
-  //       setHistory(sortedHistory);
+  //       const sortedHistory = mergedHistory.sort((a, b) => new Date(b.timestamp)
   //       setLoading(false);
   //     })
   //     .catch(err => {
