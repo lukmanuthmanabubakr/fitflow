@@ -10,7 +10,7 @@ import { TbMenuDeep } from "react-icons/tb";
 import NavSearch from "../NavSearch/NavSearch";
 import { UserImage } from "../../Pages/Profile/UserProfile/UserProfile";
 import MediaSearch from "../MediaSearch/MediaSearch";
-import SearchContent from "../SearchContent/SearchContent";
+
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
