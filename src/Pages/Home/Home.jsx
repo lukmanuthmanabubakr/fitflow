@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import "./Home.css";
 import Loader from "../../components/Loader/Loader";
-import heroBg from "../../Assets/pexels-photo-3912468.jpeg"; // Import your image
+import heroBg from "../../Assets/pexels-photo-3912468.jpeg"; // Import your 
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
