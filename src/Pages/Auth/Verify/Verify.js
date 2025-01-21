@@ -19,7 +19,7 @@ const Verify = () => {
     await dispatch(RESET());
     setTimeout(() => {
       navigate("/dashboard", { replace: true });
-      window.location.reload(); // Force
+      window.location.reload();
     }, 3000);
   };
 
