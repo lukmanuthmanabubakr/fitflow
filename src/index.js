@@ -17,7 +17,7 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want performance in your app, pass a function
+// s a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
