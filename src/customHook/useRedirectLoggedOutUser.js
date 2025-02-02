@@ -16,7 +16,7 @@ const useRedirectLoggedOutUser = (path) => {
       }
 
       if (!isLoggedIn) {
-        // (" expired, please login to");
+        // (" expired,  login to");
         navigate(path);
         return;
       }
