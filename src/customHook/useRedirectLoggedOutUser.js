@@ -16,7 +16,6 @@ const useRedirectLoggedOutUser = (path) => {
       }
 
       if (!isLoggedIn) {
-        // ("
         navigate(path);
         return;
       }
