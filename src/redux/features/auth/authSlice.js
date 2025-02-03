@@ -319,7 +319,7 @@ const authSlice = createSlice({
       state.isSuccess = false;
       state.isLoading = false;
       state.message = "";
-      state.isLoggedIn = false; // Ensure this is set to false on RESET
+      state.isLoggedIn = false; //  this set to false on RESET
       state.user = null;
     },
     CALC_VERIFIED_USER(state, action) {
