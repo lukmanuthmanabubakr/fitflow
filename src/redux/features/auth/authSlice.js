@@ -15,7 +15,7 @@ const initialState = {
   suspendedUsers: 0,
 };
 
-// Register User
+//  User
 export const register = createAsyncThunk(
   "auth/register",
   async (userData, thunkAPI) => {
